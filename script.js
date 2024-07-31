@@ -21,6 +21,15 @@ inputBtn.addEventListener("click", function() {
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     renderLeads()
 })
+
+tabBtn.addEventListener("click", function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        let tab = tabs[0].url
+        myLeads.push(tab)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        renderLeads()
+    })
+})
 deleteBtn.addEventListener("click", function() {
     myLeads = []
     localStorage.removeItem("myLeads")
