@@ -30,6 +30,5 @@ input {
 }
 
 .button:hover, #delete-btn:hover {
-    background-color: #4a7530;
     color: white;
 }
