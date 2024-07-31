@@ -29,6 +29,7 @@ input {
     cursor: pointer;
 }
 
-.button:hover {
+.button:hover, #delete-btn:hover {
     background-color: #4a7530;
+    color: white;
 }
